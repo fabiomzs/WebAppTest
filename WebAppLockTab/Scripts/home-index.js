@@ -90,7 +90,9 @@
 });
 
 function addRow() {
-    $('#tbl-items tbody:first').append("<tr>" +
+    
+
+    var newRow = "<tr class='bubble'>" +
         "<td><input class='form-control' name='txt-codigo'/></td>" +
         "<td><input name='txt-desc' value='" + getNextDate() + "' class='form-control datepicker'/></td>" +
         "<td><select name='slc-ent' class='form-control'>" + getHours() + "</select></td>" +
@@ -99,7 +101,9 @@ function addRow() {
         "<td> " +
         "<button class='btn btn-sm btn-primary addrow'><span class='glyphicon glyphicon-plus'></span></button>" +
         "<button class='btn btn-sm btn-danger deleterow' style='display: none;'><span class='glyphicon glyphicon-minus'></span></button>" +
-        "</td></tr>");
+        "</td></tr>";
+
+    $('#tbl-items tbody:first').append(newRow);
 
     getNextDate();
 
